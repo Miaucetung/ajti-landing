@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ajti-landing
+  namespace: apps
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: ajti-landing
+  template:
+    metadata:
+      labels:
+        app: ajti-landing
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: k8s-cp2
+      tolerations:
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+        - key: node-role.kubernetes.io/etcd
+          operator: Exists
+          effect: NoExecute
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: ajti-landing
+          image: ghcr.io/miaucetung/ajti-landing:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              name: http
+          resources:
+            requests:
+              cpu: 50m
+              memory: 96Mi
+            limits:
+              cpu: 300m
+              memory: 256Mi
+          env:
+            - name: NODE_ENV
+              value: production

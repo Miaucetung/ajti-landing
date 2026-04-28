@@ -3,16 +3,26 @@ export default function UnifiedLearningPlatformLandingPage() {
     {
       name: "CompTIA",
       description:
-        "Hands-on Vorbereitung für Server+, Security+, Network+, Linux+ und A+ mit Prüfungen, Fortschrittsanalyse und Gamification.",
+        "Hands-on Vorbereitung für Server+, Security+, Linux+ und A+ mit Prüfungen, Fortschrittsanalyse und Gamification.",
       badge: "Zertifizierungen",
-      href: "#platforms",
+      href: "https://comptia.ajti.online",
+      available: true,
+    },
+    {
+      name: "Networking & Cisco",
+      description:
+        "Schwerpunkt CCNA – mit zusätzlichen Lernpfaden für CompTIA Network+ und Azure Fundamentals (AZ-900). Praxisnahe Übungen und Prüfungssimulation.",
+      badge: "Networking",
+      href: "https://training.ajti.online",
+      available: true,
     },
     {
       name: "Azure",
       description:
         "Interaktive Cloud-Lernpfade, Architektur-Szenarien, Labs und prüfungsnahe Inhalte für Azure Administrator und mehr.",
       badge: "Cloud",
-      href: "#platforms",
+      href: "https://azure.ajti.online",
+      available: true,
     },
     {
       name: "AWS",
@@ -20,20 +30,23 @@ export default function UnifiedLearningPlatformLandingPage() {
         "Praxisnahe Szenarien, Quiz und Lernpfade für AWS-Zertifizierungen – von Grundlagen bis Architektur.",
       badge: "Cloud",
       href: "#platforms",
+      available: false,
     },
     {
       name: "Linux & Kubernetes",
       description:
         "Echte Terminal-Nähe, Labs, Prüfungssimulationen und produktionsnahe Übungswege für Linux- und Container-Know-how.",
       badge: "Systems",
-      href: "#platforms",
+      href: "https://linux-k8s.ajti.online",
+      available: true,
     },
     {
-      name: "Microsoft 365",
+      name: "Microsoft 365 & Endpoint",
       description:
-        "Prüfungssimulationen und Szenarien für Endpoint Management, Intune, Entra und moderne Workplace-Themen.",
+        "Prüfungssimulationen und Szenarien für MD-102 (Endpoint Administrator) und MS-102 (Microsoft 365 Administrator) – Intune, Entra, Defender und moderne Workplace-Themen.",
       badge: "Modern Work",
-      href: "#platforms",
+      href: "https://md102.ajti.online",
+      available: true,
     },
   ];
 
@@ -393,7 +406,14 @@ export default function UnifiedLearningPlatformLandingPage() {
                 <a
                   key={platform.name}
                   href={platform.href}
-                  className="group rounded-3xl border border-white/10 bg-white/5 p-7 transition hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/10"
+                  target={platform.available ? "_blank" : undefined}
+                  rel={platform.available ? "noopener noreferrer" : undefined}
+                  aria-disabled={!platform.available}
+                  className={
+                    platform.available
+                      ? "group rounded-3xl border border-white/10 bg-white/5 p-7 transition hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/10"
+                      : "group rounded-3xl border border-white/10 bg-white/5 p-7 opacity-70 cursor-not-allowed"
+                  }
                 >
                   <div className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-cyan-200">
                     {platform.badge}
@@ -405,7 +425,7 @@ export default function UnifiedLearningPlatformLandingPage() {
                     {platform.description}
                   </p>
                   <div className="mt-6 text-sm font-medium text-cyan-300 transition group-hover:text-cyan-200">
-                    Plattform öffnen →
+                    {platform.available ? "Plattform öffnen →" : "Bald verfügbar"}
                   </div>
                 </a>
               ))}
