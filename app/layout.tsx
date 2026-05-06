@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "AJTI – Unified Learning Platform",
   description:
-    "AJTI bündelt interaktive Lernplattformen für IT-Zertifizierungen: Microsoft 365, Azure, AWS, Linux, Kubernetes und CompTIA – mit Labs, Prüfungssimulationen und Fortschrittsanalyse.",
+    "AJTI bündelt interaktive Lernplattformen für IT-Zertifizierungen und Ausbildung: CompTIA, Cisco/CCNA, Azure, Linux, Kubernetes, Microsoft 365 und FiSi (IHK) – mit Labs, Prüfungssimulationen und Fortschrittsanalyse.",
 };
 
 export default function RootLayout({

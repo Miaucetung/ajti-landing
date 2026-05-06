@@ -11,31 +11,23 @@ export default function UnifiedLearningPlatformLandingPage() {
     {
       name: "Networking & Cisco",
       description:
-        "Schwerpunkt CCNA – mit zusätzlichen Lernpfaden für CompTIA Network+ und Azure Fundamentals (AZ-900). Praxisnahe Übungen und Prüfungssimulation.",
+        "Schwerpunkt CCNA – mit zusätzlichen Lernpfaden für CompTIA Network+. Praxisnahe Übungen, Topologie-Szenarien und realistische Prüfungssimulation.",
       badge: "Networking",
       href: "https://training.ajti.online",
       available: true,
     },
     {
-      name: "Azure",
+      name: "Azure & AWS",
       description:
-        "Interaktive Cloud-Lernpfade, Architektur-Szenarien, Labs und prüfungsnahe Inhalte für Azure Administrator und mehr.",
+        "Interaktive Cloud-Lernpfade für Azure Administrator und AWS – Architektur-Szenarien, Labs und prüfungsnahe Inhalte. AWS läuft parallel als Track im selben Lerntempo.",
       badge: "Cloud",
       href: "https://azure.ajti.online",
       available: true,
     },
     {
-      name: "AWS",
-      description:
-        "Praxisnahe Szenarien, Quiz und Lernpfade für AWS-Zertifizierungen – von Grundlagen bis Architektur.",
-      badge: "Cloud",
-      href: "#platforms",
-      available: false,
-    },
-    {
       name: "Linux & Kubernetes",
       description:
-        "Echte Terminal-Nähe, Labs, Prüfungssimulationen und produktionsnahe Übungswege für Linux- und Container-Know-how.",
+        "Linux-Grundlagen, LPIC-Vorbereitung und produktionsnahe Container-Praxis – Kubernetes läuft als eigener Track direkt in der Plattform.",
       badge: "Systems",
       href: "https://linux-k8s.ajti.online",
       available: true,
@@ -73,7 +65,7 @@ export default function UnifiedLearningPlatformLandingPage() {
     },
     {
       title: "Alle Zertifizierungen in einer zentralen Lernoberfläche",
-      text: "CompTIA, Azure, AWS, Linux, Kubernetes und Microsoft-Themen folgen derselben starken Lernlogik.",
+      text: "CompTIA, Cisco/CCNA, Azure, AWS, Linux, Kubernetes, Microsoft 365 und FiSi-Ausbildung folgen derselben starken Lernlogik.",
     },
     {
       title: "Messbare Exam Readiness statt Bauchgefühl",
@@ -177,7 +169,7 @@ export default function UnifiedLearningPlatformLandingPage() {
     },
     {
       q: "Ist das nur für eine Zertifizierung gedacht?",
-      a: "Nein. Das System ist als zentrales Multi-Plattform-Ökosystem gedacht und verbindet CompTIA, Azure, AWS, Linux, Kubernetes und Microsoft-Themen.",
+      a: "Nein. Das System ist als zentrales Multi-Plattform-Ökosystem gedacht und verbindet CompTIA, Cisco/CCNA, Azure, Linux, Kubernetes, Microsoft 365 und die IHK-Ausbildung zum FiSi.",
     },
     {
       q: "Was unterscheidet die Plattform von klassischen Kursportalen?",
@@ -213,7 +205,7 @@ export default function UnifiedLearningPlatformLandingPage() {
           </nav>
           <div className="flex items-center gap-3">
             <a
-              href="#pricing"
+              href="#preview"
               className="rounded-xl border border-white/15 px-4 py-2 text-sm text-slate-200 transition hover:border-white/30 hover:bg-white/5"
             >
               Demo ansehen
@@ -239,15 +231,14 @@ export default function UnifiedLearningPlatformLandingPage() {
               <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Lerne für{" "}
                 <span className="text-cyan-300">
-                  CompTIA, Azure, AWS, Linux
+                  CompTIA, Cisco, Azure, Linux
                 </span>{" "}
-                und Microsoft – in einem System.
+                und Microsoft – inklusive FiSi-Ausbildung.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
                 Interaktive Lernpfade, echte Labs, Prüfungssimulationen,
-                Analytics, Gamification und klare Exam-Readiness – gebaut für
-                Menschen, die IT wirklich verstehen und Zertifizierungen
-                bestehen wollen.
+                Analytics, Gamification und klare Exam-Readiness – für
+                IT-Zertifizierungen, Quereinsteiger und IHK-Azubis.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
