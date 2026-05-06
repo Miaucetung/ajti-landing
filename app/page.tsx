@@ -461,6 +461,8 @@ export default function UnifiedLearningPlatformLandingPage() {
                     { cert: "LPIC-1 (102-500)", group: "Linux" },
                     { cert: "CCNA", group: "Networking" },
                     { cert: "AZ-104", group: "Azure" },
+                    { cert: "AWS Cloud Practitioner", group: "AWS" },
+                    { cert: "AWS Solutions Architect", group: "AWS" },
                     { cert: "MS-102", group: "Microsoft 365" },
                     { cert: "MD-102", group: "Microsoft 365" },
                     { cert: "CKA", group: "Kubernetes" },
