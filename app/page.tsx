@@ -25,11 +25,19 @@ export default function UnifiedLearningPlatformLandingPage() {
       available: true,
     },
     {
-      name: "Linux & Kubernetes",
+      name: "Linux",
       description:
-        "Linux-Grundlagen, LPIC-Vorbereitung und produktionsnahe Container-Praxis – Kubernetes läuft als eigener Track direkt in der Plattform.",
+        "Linux-Grundlagen und LPIC-1-Vorbereitung mit praxisnahen Labs, Szenarios und Terminal-Übungen für den echten Admin-Alltag.",
       badge: "Systems",
       href: "https://linux-k8s.ajti.online",
+      available: true,
+    },
+    {
+      name: "Kubernetes",
+      description:
+        "CKA- und CKAD-Vorbereitung mit interaktiven Lernpfaden, produktionsnahen Szenarien, YAML-Übungen und Prüfungssimulation.",
+      badge: "Container",
+      href: "https://k8s.ajti.online",
       available: true,
     },
     {
@@ -65,7 +73,7 @@ export default function UnifiedLearningPlatformLandingPage() {
     },
     {
       title: "Alle Zertifizierungen in einer zentralen Lernoberfläche",
-      text: "CompTIA, Cisco/CCNA, Azure, AWS, Linux, Kubernetes, Microsoft 365 und FiSi-Ausbildung folgen derselben starken Lernlogik.",
+      text: "CompTIA, Cisco/CCNA, Azure, AWS, Linux, Kubernetes, Microsoft 365 und FiSi-Ausbildung – jede Plattform folgt derselben starken Lernlogik.",
     },
     {
       title: "Messbare Exam Readiness statt Bauchgefühl",
