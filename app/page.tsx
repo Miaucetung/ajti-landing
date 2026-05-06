@@ -48,6 +48,14 @@ export default function UnifiedLearningPlatformLandingPage() {
       href: "https://md102.ajti.online",
       available: true,
     },
+    {
+      name: "Fachinformatiker Systemintegration",
+      description:
+        "Lernplattform für die IHK-Ausbildung zum FiSi – mit prüfungsrelevanten Themen, Lernkarten, Szenarien und gezielter Vorbereitung auf die Abschlussprüfung Teil 1 und 2.",
+      badge: "Ausbildung",
+      href: "https://fisi.ajti.online",
+      available: true,
+    },
   ];
 
   const trustMetrics = [
