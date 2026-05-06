@@ -400,34 +400,73 @@ export default function UnifiedLearningPlatformLandingPage() {
                 Themenfeld oder ihren Karrierepfad.
               </p>
             </div>
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {platforms.map((platform) => (
-                <a
-                  key={platform.name}
-                  href={platform.href}
-                  target={platform.available ? "_blank" : undefined}
-                  rel={platform.available ? "noopener noreferrer" : undefined}
-                  aria-disabled={!platform.available}
-                  className={
-                    platform.available
-                      ? "group rounded-3xl border border-white/10 bg-white/5 p-7 transition hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/10"
-                      : "group rounded-3xl border border-white/10 bg-white/5 p-7 opacity-70 cursor-not-allowed"
-                  }
-                >
-                  <div className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-cyan-200">
-                    {platform.badge}
-                  </div>
-                  <div className="mt-5 text-2xl font-semibold text-white">
-                    {platform.name}
-                  </div>
-                  <p className="mt-3 leading-7 text-slate-300">
-                    {platform.description}
-                  </p>
-                  <div className="mt-6 text-sm font-medium text-cyan-300 transition group-hover:text-cyan-200">
-                    {platform.available ? "Plattform öffnen →" : "Bald verfügbar"}
-                  </div>
-                </a>
-              ))}
+            <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_320px] xl:grid-cols-[1fr_360px]">
+              <div className="grid gap-6 md:grid-cols-2">
+                {platforms.map((platform) => (
+                  <a
+                    key={platform.name}
+                    href={platform.href}
+                    target={platform.available ? "_blank" : undefined}
+                    rel={platform.available ? "noopener noreferrer" : undefined}
+                    aria-disabled={!platform.available}
+                    className={
+                      platform.available
+                        ? "group rounded-3xl border border-white/10 bg-white/5 p-7 transition hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/10"
+                        : "group rounded-3xl border border-white/10 bg-white/5 p-7 opacity-70 cursor-not-allowed"
+                    }
+                  >
+                    <div className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-cyan-200">
+                      {platform.badge}
+                    </div>
+                    <div className="mt-5 text-2xl font-semibold text-white">
+                      {platform.name}
+                    </div>
+                    <p className="mt-3 leading-7 text-slate-300">
+                      {platform.description}
+                    </p>
+                    <div className="mt-6 text-sm font-medium text-cyan-300 transition group-hover:text-cyan-200">
+                      {platform.available ? "Plattform öffnen →" : "Bald verfügbar"}
+                    </div>
+                  </a>
+                ))}
+              </div>
+
+              {/* Zertifizierungsübersicht */}
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 self-start sticky top-24">
+                <div className="text-xs font-medium uppercase tracking-[0.2em] text-cyan-300">
+                  Vollständig abgedeckt
+                </div>
+                <h3 className="mt-3 text-lg font-semibold text-white">
+                  Zertifizierungen im Lernstoff
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Diese Prüfungen sind vollständig durch Lernmodule, Labs und Prüfungssimulationen abgedeckt.
+                </p>
+                <div className="mt-5 space-y-3">
+                  {[
+                    { cert: "CompTIA A+", group: "CompTIA" },
+                    { cert: "CompTIA Linux+", group: "CompTIA" },
+                    { cert: "CompTIA Network+", group: "CompTIA" },
+                    { cert: "CompTIA Security+", group: "CompTIA" },
+                    { cert: "CompTIA Server+", group: "CompTIA" },
+                    { cert: "LPIC-1 (101-500)", group: "Linux" },
+                    { cert: "LPIC-1 (102-500)", group: "Linux" },
+                    { cert: "CKA", group: "Kubernetes" },
+                    { cert: "CKAD", group: "Kubernetes" },
+                    { cert: "IHK AP Teil 1 & 2 (FiSi)", group: "Ausbildung" },
+                  ].map(({ cert, group }) => (
+                    <div
+                      key={cert}
+                      className="flex items-center justify-between gap-3 rounded-2xl border border-white/8 bg-white/5 px-4 py-3"
+                    >
+                      <div className="text-sm font-medium text-white">{cert}</div>
+                      <div className="shrink-0 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-2 py-0.5 text-xs text-cyan-300">
+                        {group}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
