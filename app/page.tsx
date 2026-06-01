@@ -13,7 +13,7 @@ export default function UnifiedLearningPlatformLandingPage() {
       description:
         "Schwerpunkt CCNA – mit zusätzlichen Lernpfaden für CompTIA Network+. Praxisnahe Übungen, Topologie-Szenarien und realistische Prüfungssimulation.",
       badge: "Networking",
-      href: "https://training.ajti.online",
+      href: "https://ccna.ajti.online",
       available: true,
     },
     {
