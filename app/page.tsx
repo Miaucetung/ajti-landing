@@ -29,7 +29,7 @@ export default function UnifiedLearningPlatformLandingPage() {
       description:
         "Linux-Grundlagen und LPIC-1-Vorbereitung mit praxisnahen Labs, Szenarios und Terminal-Übungen für den echten Admin-Alltag.",
       badge: "Systems",
-      href: "https://linux-k8s.ajti.online",
+      href: "https://linux.ajti.online",
       available: true,
     },
     {
